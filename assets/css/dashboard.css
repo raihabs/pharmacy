@@ -1,0 +1,140 @@
+.dashboard{
+    height: calc(100vh - 60px);
+    width: calc(100vw - 250px);
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fefefe;
+    background-color: #024ab8;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+.dashboard .header .toolkit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.me-16 {
+    margin-right: 16px;
+}
+
+.dashboard-content {
+    display: grid;
+    height: calc(100vh - 60px);
+    width: calc(100vw - 250px);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    padding: 10px; 
+}
+
+.widget {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+/* .widget:hover {
+    transform: translateY(-5px);
+} */
+
+.widget .label {
+    margin-bottom: 10px;
+}
+
+.widget .view-more {
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+    color: #024ab8;
+}
+
+/* .widget:hover .view-more {
+    display: inline-block;
+} */
+
+.dashboard .total-products { 
+    grid-area: 1 / 1 / 2 / 3; 
+}
+
+.dashboard .total-sales { 
+    grid-area: 1 / 3 / 2 / 5; 
+}
+
+.dashboard .top-ten { 
+    grid-area: 2 / 1 / 7 / 7; 
+}
+
+.dashboard .latest-sales { 
+    grid-area: 1 / 7 / 4 / 9; 
+}
+
+.dashboard .reminders { 
+    grid-area: 4 / 7 / 7 / 9; 
+}
+
+.chart-container,
+.latest-sales-container,
+.reminders-container {
+    width: 100%;
+    height: 100%;
+}
+
+.reminder-controls {
+    display: flex;
+    align-items: center;
+}
+
+.reminder-controls input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.add-reminder-button {
+    border: 2px solid #024ab8;
+    background-color: #024ab8;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-reminder-button:hover {
+    background-color: #fff;
+    color: #024ab8;
+}
+
+.reminder-text {
+    flex: 1;
+}
+
+.reminder{
+    display: flex;
+    margin-top: 10px;
+}
+
+.reminder span{
+    flex: 3;
+    text-align: left;
+}
+
+.reminder .delete-reminder-button {
+    flex: 1;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
